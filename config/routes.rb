@@ -10,5 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :likes, only:['destroy']
+
   end
 end
