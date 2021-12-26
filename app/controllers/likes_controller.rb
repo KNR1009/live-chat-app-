@@ -1,5 +1,17 @@
 class LikesController < ApplicationController
-  before_action :authenticate_user!, only: ['create', destroy]
+  before_action :authenticate_user!
+
+  # def index
+  #   likes =  Like.all
+  #   likes_array = likes.map do |like|
+  #     {
+  #       id: like.id,
+  #       user_id: like.user_id,
+  #       message_id: like.message_id
+  #     }
+  #   end
+  #   render json: likes_array, status: 200
+  # end
 
   def create
     like = Like.new(message_id: params[:id], user_id: current_user.id)
