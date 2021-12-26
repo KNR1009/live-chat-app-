@@ -38,3 +38,16 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+
+# ...
+# ...省略
+
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+# gem 'rack-cors'
+
+gem 'devise', '~> 4.8'
+gem 'devise_token_auth', '~> 1.1', '>= 1.1.5'
